@@ -27,7 +27,7 @@ public class Parqueadero {
     @Column(name = "plazas_motos", nullable = false)
     private Long plazasMotos;
 
-    @Column(name = "fecha", nullable = false)
+    @Column(name = "fecha")
     private Date fecha;
 
     @Column(name = "total_dia_ganado")
