@@ -25,12 +25,10 @@ public class VehiculoDto {
     @Size(min = 1, max = 1, message = "El tipo de vehiculo debe contener al menos un caracter")
     private String tipoVehiculo;
 
-    @NotNull(message = "El modelo del vehiculo no puede estar vacio")
     private String modelo;
 
     private boolean descuento;
 
-    @NotNull(message = "El vehiculo debe de tener una fecha de entrada")
     private LocalDateTime fechaEntrada;
 
     private LocalDateTime fechaSalida;

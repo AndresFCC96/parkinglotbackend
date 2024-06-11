@@ -39,6 +39,15 @@ public class VehiculoController {
         }
     }
 
+    @GetMapping(value = "generarTotalDia", produces=MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> generarTotalDia(){
+        try {
+            return ResponseEntity.ok().body(vehiculoServicio.calcularTotalGananaciaDia());
+        }catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
+    }
+
     @PostMapping(value = "ingresar", produces= MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> ingresarVehiculo(@Valid @RequestBody VehiculoDto vehiculoDTO){
         try {
@@ -58,7 +67,7 @@ public class VehiculoController {
     }
 
     @PostMapping(value = "generarCobro", produces= MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> generarCobroSalidaVehiculo(@Valid @RequestBody VehiculoDto vehiculoDTO){
+    public ResponseEntity<?> generarCobroSalidaVehiculo(@RequestBody VehiculoDto vehiculoDTO){
         try {
             return ResponseEntity.ok().body(vehiculoServicio.generarCobroSalidaVehiculo(vehiculoDTO));
         }catch (Exception e) {
