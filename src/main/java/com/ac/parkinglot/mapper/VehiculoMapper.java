@@ -16,4 +16,10 @@ public class VehiculoMapper {
         Vehiculo vehiculo = modelMapper.map(vehiculoDto, Vehiculo.class);
         return vehiculo;
     }
+
+    public VehiculoDto entidadADto(Vehiculo vehiculo){
+        VehiculoDto vehiculoDto = modelMapper.map(vehiculo, VehiculoDto.class);
+        return vehiculoDto;
+    }
+
 }

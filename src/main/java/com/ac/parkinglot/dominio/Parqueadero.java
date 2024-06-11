@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Entity
-@Table(schema = "parqueadero")
+@Table(name = "parqueadero")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -27,7 +27,7 @@ public class Parqueadero {
     @Column(name = "plazas_motos", nullable = false)
     private Long plazasMotos;
 
-    @Column(name = "fecha", nullable = false)
+    @Column(name = "fecha")
     private Date fecha;
 
     @Column(name = "total_dia_ganado")

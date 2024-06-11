@@ -15,5 +15,7 @@ public interface VehiculoServicio {
     public Vehiculo ingresarVehiculo(VehiculoDto vehiculoDTO) throws Exception;
     public Vehiculo modificarVehiculo(VehiculoDto vehiculoDTO) throws Exception;
     public Vehiculo generarCobroSalidaVehiculo(VehiculoDto vehiculoDTO) throws Exception;
+
+    public double calcularTotalGananaciaDia() throws Exception;
     public void eliminarVehiculo(Long vehiculoId) throws Exception;
 }
